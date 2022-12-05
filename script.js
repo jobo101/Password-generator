@@ -92,9 +92,9 @@ var specialCharacters = [
 
   var confirmLength = " ";
   var confirmSpecialCharacter;
-  var confirmNumberCharacter;
-  var confirmUpperCase;
-  var confirmLowerCase;
+  var confirmNumericCharacter;
+  var confirmUpperCased;
+  var confirmLowerCased;
   
  // Function to prompt user for password options
   function getPasswordOptions() {
@@ -111,10 +111,22 @@ var specialCharacters = [
   
   // Function for getting a random element from an array
   function getRandom(arr) {
-  
+    var confirmSpecialCharacter = confirm("Click OK if you would like special characters in your password.");
+    var confirmNumericCharacter = confirm("Click OK if you would like numbers in your password.");
+    var confirmLowerCased = confirm("Click OK if you would like upper case letters in your password.");
+    var confirmLowerCased = confirm("Ckick OK if you would like lower case letters in your password.");
   }
-  
-  // Function to generate password with user input
+  // loop if answer does not match criteria
+  while(confirmUpperCased === false && confirmLowerCased === false && confirmNumericCharacter === false && confirmSpecialCharacter == false) {
+    alert("You must choose a least one type of character.");
+
+    var confirmSpecialCharacter = confirm("Click OK for special characters to be included.");
+    var confirmNumericCharacter = confirm("Click OK for numbers to be included.");
+    var confirmLowerCased = confirm("Click OK for lower cased letters.");
+    var confirmUpperCased = confirm("Click OK for upper cased letters.");
+
+  }
+  // Function to generate password with user input("")
   function generatePassword() {
   
   }
