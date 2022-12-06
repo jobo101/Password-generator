@@ -108,6 +108,9 @@ function writePassword() {
   if (passwordLength < 10 || passwordLength > 64) {
     alert("Your password is not the correct length. Enter the length again!");
     var passwordLength = prompt("Choose a password between 10 and 64.");
+    
+  //Repeat return statement to confirm the chosen length
+   alert(`Your password will contain ${passwordLength} characters.`)
   }
 // to make sure that at least one of the criteria have been picked
 
@@ -120,8 +123,10 @@ else if (lowercaseLetters === false  && upperCasedCharacters === false && number
 }
 
 // Function to generate password with user input
-var passwordCharacters;
+
 function generatePassword() {
+var passwordCharacters;
+
   if (confirmLowerCased === true) {
     passwordCharacters += lowerCasedCharacters;    
   }
