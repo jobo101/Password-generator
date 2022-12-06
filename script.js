@@ -101,7 +101,7 @@ function writePassword() {
   var confirmSpecialChar= confirm("Click OK if you would like special characters in your password.");
   var confirmNumericChar = confirm("Click OK if you would like numbers in your password.");
   var confirmLowerCased = confirm("Click OK if you would like lower case letters in your password.");
-  var confimUpperCased = confirm("Click OK if you would like upper case letters in your password.");
+  var confirmUpperCased = confirm("Click OK if you would like upper case letters in your password.");
   var passwordLength = prompt("Choose the length of password - between 10 and 64 characters.");
   if (passwordLength >=10 && passwordLength <= 64) {
     alert(`Your password will contain ${passwordLength} characters.`)
@@ -116,12 +116,12 @@ function writePassword() {
   }
 // to make sure that at least one of the criteria have been picked
 
-else if  (lowercaseLetters === false  && upperCasedCharacters === false && numbers === false && specialCharacters === false) {
+else if  (lowerCasedCharacters === false  && upperCasedCharacters === false && numericCharacters=== false && specialCharacters === false) {
   alert("You must enter at least one of the character types!");
-  var confirmSpecialChar= confirm("Click OK if you would like special characters in your password.");
-  var confirmNumericChar = confirm("Click OK if you would like numbers in your password.");
-  var confirmLowerCased = confirm("Click OK if you would like lower case letters in your password.");
-  var confimUpperCased = confirm("Click OK if you would like upper case letters in your password.");
+   confirmSpecialChar= confirm("Click OK if you would like special characters in your password.");
+   confirmNumericChar = confirm("Click OK if you would like numbers in your password.");
+   confirmLowerCased = confirm("Click OK if you would like lower case letters in your password.");
+   confirmUpperCased = confirm("Click OK if you would like upper case letters in your password.");
 }
 
 // Function to generate password with user input
@@ -132,7 +132,7 @@ var passwordCharacters;
   if (confirmLowerCased === true) {
     passwordCharacters += lowerCasedCharacters;    
   }
-  if (confimUpperCased === true) {
+  if (confirmUpperCased === true) {
   passwordCharacters += upperCasedCharacters
 }
   if (confirmSpecialChar === true) {
