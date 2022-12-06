@@ -1,28 +1,26 @@
 # Password-generator
-A password generator that prompts user for character requirements
-# Module 5 Challenge: Password Generator
 
-## Overview
+## Description
 
-This week’s challenge requires you to create an application that an employee can use to generate a random password based on criteria they’ve selected by modifying starter code. This app will run in the browser, and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean and polished user interface that is responsive, ensuring that it adapts to multiple screen sizes.
+This project was created as a weekly challenge to create a random password generator.
+The password generator is necessary to create unique, safe and secure passwords.
+The HTML and CSS code had already been implemented.
+The coding required a password generator to be produced using already set up arrays of characters.
 
-The password can include special characters. If you’re unfamiliar with these, see this [list of Password Special Characters from the OWASP Foundation](https://www.owasp.org/index.php/Password_special_characters).
+## Usage
 
-## Instructions
+The user is presented with a dialogue box in which they are prompted to enter what characters they wish their password
+to contain.  The user must select at least one, otherwise the user is redirected to enter type again.
+The user is then asked for the length of the password which must be between 10 and 64.
+If the user selects values outside these parameters then they are prompted to enter correct values.
+The outcome should be a unique password consisting of the types of characters they required.
 
-The following image shows the web application's appearance and functionality:
+## Licence
 
-![password generator demo](./assets/05-javascript-challenge-demo.png)
+Please refer to the licence in the repo.
 
+## Tests
 
-* Generate a password when the button is clicked
-  * Present a series of prompts for password criteria
-    * Length of password
-      * At least 10 characters but no more than 64.
-    * Character types
-      * Lowercase
-      * Uppercase
-      * Numeric
-      * Special characters ($@%&*, etc)
-  * Code should validate for each input and at least one character type should be selected
-  * Once prompts are answered then the password should be generated and displayed in an alert or written to the page
+Testing was done throughtout.  The application is not complete as I was unable to produce a password to the screen.
+
+ 

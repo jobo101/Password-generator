@@ -103,9 +103,11 @@ function writePassword() {
   var confirmLowerCased = confirm("Click OK if you would like lower case letters in your password.");
   var confimUpperCased = confirm("Click OK if you would like upper case letters in your password.");
   var passwordLength = prompt("Choose the length of password - between 10 and 64 characters.");
-
+  if (passwordLength >=10 && passwordLength <= 64) {
+    alert(`Your password will contain ${passwordLength} characters.`)
+  }
   //function that checks if numbers are between 10 and 64
-  if (passwordLength < 10 || passwordLength > 64) {
+  else if  (passwordLength < 10 || passwordLength > 64) {
     alert("Your password is not the correct length. Enter the length again!");
     var passwordLength = prompt("Choose a password between 10 and 64.");
     
@@ -114,7 +116,7 @@ function writePassword() {
   }
 // to make sure that at least one of the criteria have been picked
 
-else if (lowercaseLetters === false  && upperCasedCharacters === false && numbers === false && specialCharacters === false) {
+else if  (lowercaseLetters === false  && upperCasedCharacters === false && numbers === false && specialCharacters === false) {
   alert("You must enter at least one of the character types!");
   var confirmSpecialChar= confirm("Click OK if you would like special characters in your password.");
   var confirmNumericChar = confirm("Click OK if you would like numbers in your password.");
@@ -143,8 +145,9 @@ if (confirmNumericChar === true) {
 // Function for getting a random element from an array
 function getRandom(arr) {
   for (var i = 0; i < passwordLength; i++) {
-password += passwordCharacters.charAt(Math.floor(Math.random() * passwordCharacters.length));
+passwordText += passwordCharacters.charAt(Math.floor(Math.random() * passwordCharacters.length));
   }
+ 
 }
 
 
@@ -160,4 +163,4 @@ generateBtn.addEventListener('click', writePassword);
 }
 
 writePassword();
-  
+
